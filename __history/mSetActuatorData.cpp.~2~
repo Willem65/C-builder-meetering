@@ -1,0 +1,70 @@
+﻿#include "mSetActuatorData.h"
+
+ int online=0;
+ float vuValueL=0, vuValueR=0;
+
+ //  Callback functies
+void mOnlineStatus(struct mbn_handler *mbn, unsigned long addr, char valid)
+{
+	if( valid )
+		online = (int)valid;
+
+}
+
+
+
+
+
+int mSetActuatorData(struct mbn_handler *mbn, unsigned short obj, union mbn_data dat)
+{
+
+
+//	if ( obj > 1047 )                // Logger
+//	{
+//		if (checkBox1 == 1 )
+//		{
+//			char Temp[32];
+//			sprintf(Temp, "#%04d_%04d", obj,  (int)dat.UInt);
+//			WillemForm1->memLog2->Lines->Add(Temp);
+//		}
+//	}
+
+
+
+	//------------------------------------- Vu Meters 1  Links
+	if ( obj == 1036 )
+	{
+
+		int ValueL = (int)dat.Float;
+		if ( ValueL > -50 )
+		{
+
+			vuValueL = 50+dat.Float;
+			vuValueL = ((vuValueL)*10);
+
+		}
+		else
+		{
+			vuValueL = 0;
+		}
+
+
+	}
+	else if ( obj == 1037 )
+	{
+
+		int ValueR = (int)dat.Float;             // Rechts
+		if ( ValueR > -50 )
+		{
+
+			vuValueR = 50+dat.Float;
+			vuValueR = ((vuValueR)*10);
+
+		}
+		else
+		{
+			vuValueR = 0;
+		}
+	}
+	return 0;
+}

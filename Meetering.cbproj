@@ -6,7 +6,7 @@
         <AppType>Application</AppType>
         <MainSource>Meetering.cpp</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <CC_Suffix Condition="'$(CC_Suffix)'==''">c</CC_Suffix>
         <TargetedPlatforms>1</TargetedPlatforms>
@@ -112,6 +112,7 @@
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
         <ILINK_LibraryPath>$(BDSLIB)\$(PLATFORM)$(CC_SUFFIX)\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <LinkPackageImports>rtl.bpi;vcl.bpi</LinkPackageImports>
+        <BT_BuildType>AppStore</BT_BuildType>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <Defines>NDEBUG;$(Defines)</Defines>
@@ -120,12 +121,15 @@
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
+        <LinkPackageImports>rtl.bpi;vcl.bpi</LinkPackageImports>
     </PropertyGroup>
     <ItemGroup>
-        <CppCompile Include="ButtonOpenObjects.cpp">
-            <DependentOn>ButtonOpenObjects.h</DependentOn>
-            <BuildOrder>3</BuildOrder>
+        <CppCompile Include="Button1Click.cpp">
+            <BuildOrder>8</BuildOrder>
         </CppCompile>
+        <None Include="Button1Click.h">
+            <BuildOrder>8</BuildOrder>
+        </None>
         <None Include="mbn.h">
             <BuildOrder>4</BuildOrder>
         </None>
@@ -146,6 +150,12 @@
             <BuildOrder>1</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
+        <CppCompile Include="mSetActuatorData.cpp">
+            <BuildOrder>6</BuildOrder>
+        </CppCompile>
+        <None Include="mSetActuatorData.h">
+            <BuildOrder>7</BuildOrder>
+        </None>
         <FormResources Include="MeeteringForm.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -175,6 +185,52 @@
                 </Source>
             </CPlusPlusBuilder.Personality>
             <Deployment Version="4">
+                <DeployFile LocalName="$(BDS)\Redist\Win32\rtl280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\rtl280.de" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>rtl280.de</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\rtl280.fr" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>rtl280.fr</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\rtl280.ja" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>rtl280.ja</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vcl280.bpl" Configuration="Debug" Class="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vcl280.de" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vcl280.de</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vcl280.fr" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vcl280.fr</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\Win32\vcl280.ja" Configuration="Debug" Class="DependencyPackageResource">
+                    <Platform Name="Win32">
+                        <RemoteName>vcl280.ja</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile Condition="'$(DynamicRTL)'=='true'" LocalName="$(BDS)\Redist\osx32\libcgcrtl.dylib" Class="DependencyModule">
                     <Platform Name="OSX32">
                         <Overwrite>true</Overwrite>
@@ -200,6 +256,18 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName="$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_150.png" Configuration="Debug" Class="UWP_CppLogo150">
+                    <Platform Name="Win32">
+                        <RemoteName>Logo150x150.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_44.png" Configuration="Debug" Class="UWP_CppLogo44">
+                    <Platform Name="Win32">
+                        <RemoteName>Logo44x44.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile Condition="'$(UsingDelphiRTL)'=='true'" LocalName="$(BDS)\bin\borlndmm.dll" Class="DependencyModule">
                     <Platform Name="Win32">
                         <Overwrite>true</Overwrite>
@@ -221,6 +289,11 @@
                     </Platform>
                 </DeployFile>
                 <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin\cc32c280mt.dll" Class="DependencyModule">
+                    <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName=".\Win32\Debug\AppxManifest.xml" Configuration="Debug" Class="ProjectUWPManifest">
                     <Platform Name="Win32">
                         <Overwrite>true</Overwrite>
                     </Platform>

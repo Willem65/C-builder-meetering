@@ -54,11 +54,9 @@ void __fastcall TForm1::FormCreate(TObject *Sender)
 
    file.open("ipsetting.txt");
 
-
 	if (file.is_open())
 	{
 		std::string line;
-
 		while (std::getline(file, line))
 		{
 			if (line.find("ip address  = ") != std::string::npos)

@@ -65,8 +65,8 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 	sprintf(thisnodeB.Description, "Axite Control Surface 6 Faders + CRM");
 	sprintf(thisnodeB.Name, "Meetering Test Node");
 	thisnodeB.ManufacturerID = 0x0001;
-	thisnodeB.ProductID = 0x0022;
-	thisnodeB.UniqueIDPerProduct = 0x511;   //UniqueIDPerProduct
+	thisnodeB.ProductID = 0x0024;
+	thisnodeB.UniqueIDPerProduct = 0x516;   //UniqueIDPerProduct
 	thisnodeB.HardwareMajorRevision = 0;
 	thisnodeB.HardwareMinorRevision = 0;
 	thisnodeB.FirmwareMajorRevision = 1;
@@ -80,26 +80,32 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 	thisnodeB.HardwareParent[2] = 0;
 	thisnodeB.ServiceRequest = 0;
 	// 1024 - 1035: OLED Display lines
-	for (cnt=0; cnt<6; cnt++)
-	{
-		sprintf(obj_desc, "Display %d Line 1", cnt+1);
 
-		objects[cntObject++] = MBN_OBJ(obj_desc, MBN_DATATYPE_NODATA, MBN_DATATYPE_OCTETS, 8, 0, 127, 0, "");
 
-		//objects[cntObject++] = MBN_OBJ(obj_desc, MBN_DATATYPE_UINT, 0, 2 , 0, 512, 256, MBN_DATATYPE_NODATA);
-	}
-	for (cnt=0; cnt<6; cnt++)
+	sprintf(obj_desc, "Meter %d Left dB", cnt+1);
+	objects[cntObject++] = MBN_OBJ( obj_desc, MBN_DATATYPE_NODATA, MBN_DATATYPE_FLOAT, 2, -50.0, 5.0, -50.0, -50.0);
+	sprintf(obj_desc, "Meter %d Right dB", cnt+1);
+	objects[cntObject++] = MBN_OBJ( obj_desc, MBN_DATATYPE_NODATA, MBN_DATATYPE_FLOAT, 2, -50.0, 5.0, -50.0, -50.0);
+
+	sprintf(obj_desc, "Phase Meter %d", cnt+1);
+	objects[cntObject++] = MBN_OBJ( obj_desc, MBN_DATATYPE_NODATA, MBN_DATATYPE_FLOAT, 2, 0.0, 0.0, 0.0, 0.0);
+
+	sprintf(obj_desc, "dummy %d", cnt+1);
+	objects[cntObject++] = MBN_OBJ( obj_desc, MBN_DATATYPE_NODATA, MBN_DATATYPE_FLOAT, 2, 0.0, 0.0, 0.0, 0.0);
+
+	for (cnt=0; cnt<68; cnt++)
 	{
-		sprintf(obj_desc, "Display %d Line 2", cnt+1);
-		objects[cntObject++] = MBN_OBJ(obj_desc, MBN_DATATYPE_NODATA, MBN_DATATYPE_OCTETS, 8, 0, 127, 0, "");
+		sprintf(obj_desc, "dummy %d", cnt+1);
+		objects[cntObject++] = MBN_OBJ( obj_desc, MBN_DATATYPE_NODATA, MBN_DATATYPE_FLOAT, 2, 0.0, 0.0, 0.0, 0.0);
 	}
+
 
 	// 1036 - 1047: Stereo Audio level metering
-	for (cnt=0; cnt<6; cnt++)
+	for (cnt=0; cnt<32; cnt++)
 	{
-		sprintf(obj_desc, "Display Meter %d Left dB", cnt+1);
+		sprintf(obj_desc, "Small meter %d left dB", cnt+1);
 		objects[cntObject++] = MBN_OBJ( obj_desc, MBN_DATATYPE_NODATA, MBN_DATATYPE_FLOAT, 2, -50.0, 5.0, -50.0, -50.0);
-		sprintf(obj_desc, "Display Meter %d Right dB", cnt+1);
+		sprintf(obj_desc, "Small meter %d right dB", cnt+1);
 		objects[cntObject++] = MBN_OBJ( obj_desc, MBN_DATATYPE_NODATA, MBN_DATATYPE_FLOAT, 2, -50.0, 5.0, -50.0, -50.0);
 	}
 

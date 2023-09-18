@@ -7,9 +7,6 @@
 #include "mSetActuatorData.h"
 #include "mbn.h"
 
-
-
-
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -31,24 +28,93 @@ void __fastcall TForm1::FormCreate(TObject *Sender)
 //---------------------------------------------------------------------------
 
 
+void LoopThroughProgressBars(int oldtst);
+
+
 int oldOnline, started;
 static int oldtst, oldtstR, oldtst2, oldtstR2, newtst;
+float vuValueLL, vuValueRR, vuValueProg;
+int oldVuMeterBuffer[128], oldProgMeterBuffer[128];
 
-void __fastcall TForm1::OnlineDetectTimerTimer(TObject *Sender)
+
+void __fastcall TForm1::RefreshTimerTimer(TObject *Sender)
 {
-	 if ( online != oldOnline)
-        {
-			memLog->Lines->Add(online);
-			started=1;
-			//WillemForm1->Label7->Click();
-			TimerStartDelay->Enabled = true;
+	if ( online != oldOnline)
+	{
+		memLog->Lines->Add(online);
+		started=1;
+		TimerStartDelay->Enabled = true;
+	}
+
+	online = oldOnline;
+
+	if ( started )
+	{
+
+	memLog->Lines->Add(ProgMeterBuffer[0]);
+
+		for (int i = 0; i < 64; i++)     //Loop through each progress bar and set its value
+		{
+
+			if (oldVuMeterBuffer[i] > 0)         oldVuMeterBuffer[i] = oldVuMeterBuffer[i] - 3;
+			if (oldVuMeterBuffer[i] < 0)         oldVuMeterBuffer[i] = vuValueLL;
+			if (oldVuMeterBuffer[i] < vuValueLL)  oldVuMeterBuffer[i] = vuValueLL;
+
+
+			//vuValueLL = VuMeterBuffer[i];
+			String progressBarName = "ProgressBar" + IntToStr(i + 1);                                      // Unique name of each progress bar component
+			TProgressBar* progressBar = static_cast<TProgressBar*>(FindComponent(progressBarName));        // Find the progress bar by its name
+
+
+			if (progressBar)
+			{
+
+				vuValueLL = VuMeterBuffer[i];
+				progressBar->Position = oldVuMeterBuffer[i];
+
+			}
+
 
 		}
 
-		online = oldOnline;
+
+
+
+
+
+
+		for (int i = 64; i < 66; i++)     //Loop through each progress bar and set its value
+		{
+            i -= 64;
+			if (oldProgMeterBuffer[i] > 0)         oldProgMeterBuffer[i] = oldProgMeterBuffer[i] - 3;
+			if (oldProgMeterBuffer[i] < 0)         oldProgMeterBuffer[i] = vuValueProg;
+			if (oldProgMeterBuffer[i] < vuValueProg)  oldProgMeterBuffer[i] = vuValueProg;
+
+
+			//vuValueLL = VuMeterBuffer[i];
+			String progressBarName = "ProgressBar" + IntToStr(i + 1);                                      // Unique name of each progress bar component
+			TProgressBar* progressBar = static_cast<TProgressBar*>(FindComponent(progressBarName));        // Find the progress bar by its name
+
+
+			if (progressBar)
+			{
+
+				vuValueProg = ProgMeterBuffer[i];
+				//progressBar->Position = ProgMeterBuffer[i-64];
+				progressBar->Position = oldProgMeterBuffer[i];
+
+			}
+
+
+		}
+
+
+
+
+
+
+	}
+	double tst=1;
 }
 //---------------------------------------------------------------------------
-
-
-
 

@@ -1,0 +1,20 @@
+﻿
+#ifndef MSETACTUATORDATA_H
+#define MSETACTUATORDATA_H
+
+//#include "MeeteringForm.h"
+#include "mbn.h"
+
+
+extern int online;
+
+//extern
+//float vuValueL, vuValueR;
+extern int VuMeterBuffer[128], ProgMeterBuffer[128];
+
+//int mSensorDataChanged(struct mbn_handler *mbn, struct mbn_message *msg, unsigned short obj, unsigned char type, union mbn_data dat);
+void mOnlineStatus(struct mbn_handler *mbn, unsigned long addr, char valid);
+int mSetActuatorData(struct mbn_handler *mbn, unsigned short obj, union mbn_data dat);
+
+
+#endif

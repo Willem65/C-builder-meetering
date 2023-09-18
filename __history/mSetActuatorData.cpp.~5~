@@ -1,0 +1,94 @@
+﻿#include "mSetActuatorData.h"
+
+ int online=0;
+ //float vuValueL=0, vuValueR=0;
+ int VuMeterBuffer[128], ProgMeterBuffer[128];
+
+ //  Callback functies
+void mOnlineStatus(struct mbn_handler *mbn, unsigned long addr, char valid)
+{
+	if( valid )
+		online = (int)valid;
+
+}
+
+
+
+
+
+int mSetActuatorData(struct mbn_handler *mbn, unsigned short obj, union mbn_data dat)
+{
+
+
+//	if ( obj > 1047 )                // Logger
+//	{
+//		if (checkBox1 == 1 )
+//		{
+//			char Temp[32];
+//			sprintf(Temp, "#%04d_%04d", obj,  (int)dat.UInt);
+//			WillemForm1->memLog2->Lines->Add(Temp);
+//		}
+//	}
+
+
+
+	//------------------------------------- Vu Meters
+	int AantalVumeters, ProgVumeters;
+	float vuValueL, ValueProg;
+
+	for ( AantalVumeters = 0; AantalVumeters < 64; AantalVumeters++)
+	{
+
+
+		if ( obj == 1096+AantalVumeters )
+		{
+
+			int ValueL = (int)dat.Float;
+			if ( ValueL > -50 )
+			{
+
+				vuValueL = 50+dat.Float;
+				vuValueL = ((vuValueL)*10);
+				VuMeterBuffer[AantalVumeters]=vuValueL;
+
+			}
+			else
+			{
+				vuValueL = 0;
+                VuMeterBuffer[AantalVumeters]=0;
+			}
+
+		}
+
+	}
+
+	for ( ProgVumeters = 0; ProgVumeters < 64; ProgVumeters++)
+	{
+
+
+		if ( obj == 1024+ProgVumeters )
+		{
+
+			int ValueP = (int)dat.Float;
+			if ( ValueP > -50 )
+			{
+
+				ValueProg = 50+dat.Float;
+				ValueProg = ((ValueProg)*10);
+				ProgMeterBuffer[ProgVumeters]=ValueProg;
+
+			}
+			else
+			{
+				ValueProg = 0;
+				ProgMeterBuffer[ProgVumeters]=0;
+			}
+
+		}
+
+	}
+
+
+
+	return 0;
+}

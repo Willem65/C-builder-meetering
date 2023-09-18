@@ -216,6 +216,7 @@ __published:	// IDE-managed Components
 	void __fastcall RefreshTimerTimer(TObject *Sender);
 	void __fastcall Button2Click(TObject *Sender);
 	void __fastcall Timer4Timer(TObject *Sender);
+	void __fastcall OnlineDetectTimerTimer(TObject *Sender);
 
 private:	// User declarations
 public:		// User declarations

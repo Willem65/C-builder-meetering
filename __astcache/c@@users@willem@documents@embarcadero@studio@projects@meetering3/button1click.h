@@ -1,4 +1,4 @@
-﻿
+﻿#pragma once
 #ifndef BUTTON1CLICK_H
 #define BUTTON1CLICK_H
 

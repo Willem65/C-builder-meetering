@@ -47,7 +47,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 
 
   // itf = mbnUDPOpen(Temp, strdup("34848"), 0, error);  // Maak verbinding met ethernet  // strdup( ) handige functie
-   itf = mbnUDPOpen(strdup("192.168.1.76"), strdup("34848"), 0, error);
+   itf = mbnUDPOpen(Temp, strdup("34848"), 0, error);
 
    //
 //

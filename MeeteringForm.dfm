@@ -5,7 +5,7 @@ object Form1: TForm1
   Caption = 'Test Axite Meetering utility'
   ClientHeight = 441
   ClientWidth = 1272
-  Color = clCream
+  Color = clWindow
   DoubleBuffered = True
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -2444,12 +2444,14 @@ object Form1: TForm1
     Top = 30
     Width = 57
     Height = 20
-    Caption = 'Test'
+    Caption = 'Set ip'
     TabOrder = 75
     OnClick = Button2Click
   end
   object OnlineDetectTimer: TTimer
+    Enabled = False
     Interval = 3000
+    OnTimer = OnlineDetectTimerTimer
     Left = 1202
     Top = 208
   end

@@ -1,5 +1,7 @@
 ﻿#define MBN_VARARG
 
+
+
 #include <vcl.h>
 #pragma hdrstop
 
@@ -7,8 +9,11 @@
 #include "mSetActuatorData.h"
 #include "mbn.h"
 #include <iostream>
+#include <fstream>
 //#include <ctime>
 //#include <chrono>
+//#include <stdio.h>
+#include <string>
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -35,7 +40,15 @@ void __fastcall TForm1::FormCreate(TObject *Sender)
 
 	Button1->Enabled = true;
 	Button2->Enabled = true;
+    UDPEdit->Enabled = true;
 
+	//----------------------------------------------------- Read from file
+	std::string fileContent;
+	std::ifstream file;
+	//std::ifstream inputFile;
+	std::string ipString;
+	std::string crmStdPot;
+	std::string	faders;
 
 	char Temp[16];
 
@@ -56,7 +69,7 @@ void __fastcall TForm1::FormCreate(TObject *Sender)
 	}
 	else
 	{
-		std::cout << "Unable to open file ip.txt" << std::endl;
+		ShowMessage("Wrong IP address, or axum server is not running");
 	}
 
 
@@ -173,6 +186,17 @@ void __fastcall TForm1::Timer4Timer(TObject *Sender)
         TDateTime currentTime = Now();
 	   Label1->Caption = currentTime.TimeString();
 	   Label1->Refresh();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::OnlineDetectTimerTimer(TObject *Sender)
+{
+		if ( started == 0 )
+		{
+			ShowMessage("Wrong IP address, or axum server is not running");
+			OnlineDetectTimer->Enabled = false;
+		}
+		OnlineDetectTimer->Enabled = false;
 }
 //---------------------------------------------------------------------------
 

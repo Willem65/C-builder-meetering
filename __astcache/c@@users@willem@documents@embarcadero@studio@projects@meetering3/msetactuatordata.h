@@ -1,4 +1,4 @@
-﻿
+﻿#pragma once
 #ifndef MSETACTUATORDATA_H
 #define MSETACTUATORDATA_H
 

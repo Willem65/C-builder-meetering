@@ -1,4 +1,4 @@
-﻿#define MBN_VARARG
+#define MBN_VARARG
 
 #include "mbn.h"
 #include "MeeteringForm.h"

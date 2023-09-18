@@ -7,8 +7,8 @@
 #include "mSetActuatorData.h"
 #include "mbn.h"
 #include <iostream>
-#include <ctime>
-#include <chrono>
+//#include <ctime>
+//#include <chrono>
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -25,6 +25,48 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 
 void __fastcall TForm1::FormCreate(TObject *Sender)
 {
+
+   	// iterate through all controls on Form1  TWillemForm1->ControlCount, Disable all Controls
+	for (int i = 0; i < Form1->ControlCount ; i++)
+	{
+		// disable the control by setting Enabled property to false
+		Form1->Controls[i]->Enabled = false;
+	}
+
+	Button1->Enabled = true;
+	Button2->Enabled = true;
+
+
+	char Temp[16];
+
+   file.open("ipsetting.txt");
+
+
+	if (file.is_open())
+	{
+		std::string line;
+
+		while (std::getline(file, line))
+		{
+			if (line.find("ip address  = ") != std::string::npos)
+			{
+				ipString = line.c_str();
+			}
+		}
+	}
+	else
+	{
+		std::cout << "Unable to open file ip.txt" << std::endl;
+	}
+
+
+	String s = ipString.c_str();
+	int text = s.Length();
+	StrPCopy(Temp, s.SubString1( 15 , text-2 ));
+	UDPEdit->Text = Temp;
+	memLog->Text = online;
+
+
  	char err[MBN_ERRSIZE], ifdesc[512];
 	struct mbn_if_ethernet *n;
 }
@@ -44,44 +86,17 @@ void __fastcall TForm1::RefreshTimerTimer(TObject *Sender)
 {
 	if ( online != oldOnline)
 	{
-		TDateTime Today, Date2, TheTime, Time2;
-		unsigned short Year, Year2, Month, Month2, Day, Day2;
-		unsigned short Hour, Hour2, Min, Min2, Sec, Sec2, MSec, MSec2;
-		int NbrOfDays;
-		double DiffSecs;
-
-		Today = Date();
-		TheTime = Time();
-
-		Label2->Caption = ("Today: " + FormatDateTime("yyyy/mm/dd", Today));
-
-//		time_t t;
-//		t = time(NULL);
-//
-//		char timeBuffer[100];
-//
-//		sprintf(timeBuffer,"%ld",t);
-
-
-
-		//ShowMessage("The current date and time is: " + currentTime.DateTimeString());
-
-//            auto now = std::chrono::system_clock::now();
-//	auto now_ms = std::chrono::time_point_cast<std::chrono::milliseconds>(now);
-//	auto value = now_ms.time_since_epoch().count();
-//	//std::cout << "Current time: " << value << " milliseconds since epoch.\n";
-//
-//	 Label1->Caption = value;
-
-
-
-
+		// iterate through all controls on Form1  TWillemForm1->ControlCount, Disable all Controls
+		for (int i = 0; i < Form1->ControlCount ; i++)
+		{
+			// disable the control by setting Enabled property to false
+			Form1->Controls[i]->Enabled = true;
+		}
 
 		memLog->Lines->Add(online);
 		started=1;
 		TimerStartDelay->Enabled = true;
-
-
+		Timer4->Enabled = true;
 	}
 
 	online = oldOnline;
@@ -134,7 +149,8 @@ void __fastcall TForm1::RefreshTimerTimer(TObject *Sender)
 
 void __fastcall TForm1::Button2Click(TObject *Sender)
 {
-	 TForm1::RefreshTimer->Enabled = false;
+	 	// Execute the Notepad application
+	system("notepad.exe ipsetting.txt");
 }
 //---------------------------------------------------------------------------
 
@@ -142,6 +158,18 @@ void __fastcall TForm1::Button2Click(TObject *Sender)
 
 void __fastcall TForm1::Timer4Timer(TObject *Sender)
 {
+
+ 		TDateTime Today, Date2, TheTime, Time2;
+		unsigned short Year, Year2, Month, Month2, Day, Day2;
+		unsigned short Hour, Hour2, Min, Min2, Sec, Sec2, MSec, MSec2;
+		int NbrOfDays;
+		double DiffSecs;
+
+		Today = Date();
+		TheTime = Time();
+
+		Label2->Caption = ("Today: " + FormatDateTime("yyyy/mm/dd", Today));
+
         TDateTime currentTime = Now();
 	   Label1->Caption = currentTime.TimeString();
 	   Label1->Refresh();

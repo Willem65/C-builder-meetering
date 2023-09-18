@@ -2,7 +2,7 @@ object Form1: TForm1
   Left = 0
   Top = 0
   VertScrollBar.Tracking = True
-  Caption = 'Form1'
+  Caption = 'Test Axite Meetering utility'
   ClientHeight = 441
   ClientWidth = 1272
   Color = clCream
@@ -15,14 +15,14 @@ object Form1: TForm1
   OnCreate = FormCreate
   TextHeight = 15
   object Label1: TLabel
-    Left = 403
-    Top = 117
-    Width = 372
-    Height = 129
+    Left = 468
+    Top = 136
+    Width = 252
+    Height = 85
     Caption = '00:00:00'
     Font.Charset = ANSI_CHARSET
     Font.Color = clNavy
-    Font.Height = -96
+    Font.Height = -64
     Font.Name = '@Arial Unicode MS'
     Font.Style = []
     ParentFont = False
@@ -30,9 +30,9 @@ object Form1: TForm1
   object Label2: TLabel
     Left = 494
     Top = 247
-    Width = 180
+    Width = 141
     Height = 32
-    Caption = 'Sun Sep 17 2023'
+    Caption = '--- --- -- ----'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -24
@@ -93,8 +93,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label7: TLabel
-    Left = 95
-    Top = 14
+    Left = 83
+    Top = 13
     Width = 61
     Height = 25
     Caption = 'Mixbus'
@@ -106,8 +106,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object Label8: TLabel
-    Left = 218
-    Top = 14
+    Left = 206
+    Top = 13
     Width = 61
     Height = 25
     Caption = 'Mixbus'
@@ -157,35 +157,13 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
   end
-  object Label12: TLabel
-    Left = 319
+  object LabelRedL1: TLabel
+    Left = 301
     Top = 10
     Width = 52
-    Height = 17
+    Height = 40
     AutoSize = False
-    Caption = 'Mic-ON'
-    Color = clRed
-    ParentColor = False
-    Transparent = False
-  end
-  object Label13: TLabel
-    Left = 319
-    Top = 25
-    Width = 52
-    Height = 15
-    AutoSize = False
-    Caption = 'GPO1'
-    Color = clRed
-    ParentColor = False
-    Transparent = False
-  end
-  object Label14: TLabel
-    Left = 319
-    Top = 39
-    Width = 52
-    Height = 13
-    AutoSize = False
-    Caption = 'RedLight1'
+    Caption = 'Mic-ON1 GPO1    Redlight1'
     Color = clRed
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -195,9 +173,10 @@ object Form1: TForm1
     ParentColor = False
     ParentFont = False
     Transparent = False
+    WordWrap = True
   end
   object Label15: TLabel
-    Left = 319
+    Left = 301
     Top = 50
     Width = 24
     Height = 13
@@ -209,35 +188,8 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
   end
-  object Label16: TLabel
-    Left = 389
-    Top = 10
-    Width = 43
-    Height = 15
-    Caption = 'Mic-ON'
-  end
-  object Label17: TLabel
-    Left = 389
-    Top = 25
-    Width = 30
-    Height = 15
-    Caption = 'GPO1'
-  end
-  object Label18: TLabel
-    Left = 389
-    Top = 39
-    Width = 52
-    Height = 13
-    Caption = 'RedLight1'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
-  end
   object Label19: TLabel
-    Left = 389
+    Left = 374
     Top = 50
     Width = 24
     Height = 13
@@ -249,35 +201,8 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
   end
-  object Label20: TLabel
-    Left = 458
-    Top = 10
-    Width = 43
-    Height = 15
-    Caption = 'Mic-ON'
-  end
-  object Label21: TLabel
-    Left = 458
-    Top = 25
-    Width = 30
-    Height = 15
-    Caption = 'GPO1'
-  end
-  object Label22: TLabel
-    Left = 458
-    Top = 39
-    Width = 52
-    Height = 13
-    Caption = 'RedLight1'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
-  end
   object Label23: TLabel
-    Left = 458
+    Left = 447
     Top = 50
     Width = 24
     Height = 13
@@ -289,35 +214,8 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
   end
-  object Label24: TLabel
-    Left = 528
-    Top = 10
-    Width = 43
-    Height = 15
-    Caption = 'Mic-ON'
-  end
-  object Label25: TLabel
-    Left = 528
-    Top = 25
-    Width = 30
-    Height = 15
-    Caption = 'GPO1'
-  end
-  object Label26: TLabel
-    Left = 528
-    Top = 39
-    Width = 52
-    Height = 13
-    Caption = 'RedLight1'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
-  end
   object Label27: TLabel
-    Left = 528
+    Left = 519
     Top = 50
     Width = 24
     Height = 13
@@ -329,35 +227,8 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
   end
-  object Label28: TLabel
-    Left = 597
-    Top = 10
-    Width = 43
-    Height = 15
-    Caption = 'Mic-ON'
-  end
-  object Label29: TLabel
-    Left = 597
-    Top = 25
-    Width = 30
-    Height = 15
-    Caption = 'GPO1'
-  end
-  object Label30: TLabel
-    Left = 597
-    Top = 39
-    Width = 52
-    Height = 13
-    Caption = 'RedLight1'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
-  end
   object Label31: TLabel
-    Left = 597
+    Left = 592
     Top = 50
     Width = 24
     Height = 13
@@ -369,66 +240,12 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
   end
-  object Label32: TLabel
-    Left = 667
-    Top = 10
-    Width = 43
-    Height = 15
-    Caption = 'Mic-ON'
-  end
-  object Label33: TLabel
-    Left = 667
-    Top = 25
-    Width = 30
-    Height = 15
-    Caption = 'GPO1'
-  end
-  object Label34: TLabel
-    Left = 667
-    Top = 39
-    Width = 52
-    Height = 13
-    Caption = 'RedLight1'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
-  end
   object Label35: TLabel
-    Left = 667
+    Left = 664
     Top = 50
     Width = 24
     Height = 13
     Caption = '1046'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Label36: TLabel
-    Left = 736
-    Top = 10
-    Width = 43
-    Height = 15
-    Caption = 'Mic-ON'
-  end
-  object Label37: TLabel
-    Left = 736
-    Top = 25
-    Width = 30
-    Height = 15
-    Caption = 'GPO1'
-  end
-  object Label38: TLabel
-    Left = 736
-    Top = 39
-    Width = 52
-    Height = 13
-    Caption = 'RedLight1'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -449,35 +266,8 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
   end
-  object Label40: TLabel
-    Left = 806
-    Top = 10
-    Width = 43
-    Height = 15
-    Caption = 'Mic-ON'
-  end
-  object Label41: TLabel
-    Left = 806
-    Top = 25
-    Width = 30
-    Height = 15
-    Caption = 'GPO1'
-  end
-  object Label42: TLabel
-    Left = 806
-    Top = 39
-    Width = 52
-    Height = 13
-    Caption = 'RedLight1'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
-  end
   object Label43: TLabel
-    Left = 806
+    Left = 809
     Top = 50
     Width = 24
     Height = 13
@@ -1055,9 +845,855 @@ object Form1: TForm1
     ShowHint = False
     WordWrap = True
   end
+  object LabelRedL2: TLabel
+    Left = 373
+    Top = 10
+    Width = 52
+    Height = 40
+    AutoSize = False
+    Caption = 'Mic-ON2 GPO2    Redlight2'
+    Color = clRed
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+    WordWrap = True
+  end
+  object LabelRedL4: TLabel
+    Left = 518
+    Top = 10
+    Width = 52
+    Height = 40
+    AutoSize = False
+    Caption = 'Mic-ON4 GPO4    Redlight4'
+    Color = clRed
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+    WordWrap = True
+  end
+  object LabelRedL3: TLabel
+    Left = 446
+    Top = 10
+    Width = 52
+    Height = 40
+    AutoSize = False
+    Caption = 'Mic-ON3 GPO3    Redlight3'
+    Color = clRed
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+    WordWrap = True
+  end
+  object LabelRedL8: TLabel
+    Left = 808
+    Top = 10
+    Width = 52
+    Height = 40
+    AutoSize = False
+    Caption = 'Phone4   GPO8    Redlight8'
+    Color = clRed
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+    WordWrap = True
+  end
+  object LabelRedL7: TLabel
+    Left = 736
+    Top = 10
+    Width = 52
+    Height = 40
+    AutoSize = False
+    Caption = 'Phone3   GPO7    Redlight7'
+    Color = clRed
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+    WordWrap = True
+  end
+  object LabelRedL6: TLabel
+    Left = 663
+    Top = 10
+    Width = 52
+    Height = 40
+    AutoSize = False
+    Caption = 'Phone2   GPO6    Redlight6'
+    Color = clRed
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+    WordWrap = True
+  end
+  object LabelRedL5: TLabel
+    Left = 591
+    Top = 10
+    Width = 52
+    Height = 40
+    AutoSize = False
+    Caption = 'Phone1   GPO5    Redlight5'
+    Color = clRed
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+    WordWrap = True
+  end
+  object Label16: TLabel
+    Left = 99
+    Top = 37
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- +5  -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label17: TLabel
+    Left = 99
+    Top = 57
+    Width = 31
+    Height = 18
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '-  0  -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label18: TLabel
+    Left = 99
+    Top = 77
+    Width = 30
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '-  5  -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label12: TLabel
+    Left = 99
+    Top = 117
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 15 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label13: TLabel
+    Left = 99
+    Top = 137
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 20 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label14: TLabel
+    Left = 99
+    Top = 97
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 10 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label20: TLabel
+    Left = 99
+    Top = 197
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 35 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label21: TLabel
+    Left = 99
+    Top = 217
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 40 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label22: TLabel
+    Left = 99
+    Top = 257
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 50 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label24: TLabel
+    Left = 99
+    Top = 237
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 45 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label25: TLabel
+    Left = 99
+    Top = 157
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 30 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label26: TLabel
+    Left = 99
+    Top = 177
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 25 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label28: TLabel
+    Left = 1032
+    Top = 38
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- +5  -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label29: TLabel
+    Left = 1033
+    Top = 59
+    Width = 31
+    Height = 18
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '-  0  -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label30: TLabel
+    Left = 1033
+    Top = 79
+    Width = 30
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '-  5  -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label32: TLabel
+    Left = 1033
+    Top = 119
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 15 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label33: TLabel
+    Left = 1033
+    Top = 139
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 20 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label34: TLabel
+    Left = 1033
+    Top = 99
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 10 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label36: TLabel
+    Left = 1033
+    Top = 199
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 35 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label37: TLabel
+    Left = 1033
+    Top = 219
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 40 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label38: TLabel
+    Left = 1033
+    Top = 259
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 50 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label40: TLabel
+    Left = 1033
+    Top = 239
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 45 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label41: TLabel
+    Left = 1033
+    Top = 159
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 30 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label42: TLabel
+    Left = 1033
+    Top = 179
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 25 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label47: TLabel
+    Left = 224
+    Top = 238
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 45 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label49: TLabel
+    Left = 224
+    Top = 178
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 25 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label51: TLabel
+    Left = 224
+    Top = 158
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 30 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label80: TLabel
+    Left = 224
+    Top = 258
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 50 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label81: TLabel
+    Left = 224
+    Top = 218
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 40 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label82: TLabel
+    Left = 224
+    Top = 198
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 35 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label83: TLabel
+    Left = 224
+    Top = 98
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 10 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label84: TLabel
+    Left = 224
+    Top = 138
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 20 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label85: TLabel
+    Left = 224
+    Top = 118
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 15 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label86: TLabel
+    Left = 224
+    Top = 78
+    Width = 30
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '-  5  -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label87: TLabel
+    Left = 224
+    Top = 58
+    Width = 31
+    Height = 18
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '-  0  -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label88: TLabel
+    Left = 224
+    Top = 38
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- +5  -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label89: TLabel
+    Left = 906
+    Top = 98
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 10 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label90: TLabel
+    Left = 906
+    Top = 178
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 25 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label91: TLabel
+    Left = 906
+    Top = 158
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 30 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label92: TLabel
+    Left = 906
+    Top = 238
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 45 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label93: TLabel
+    Left = 906
+    Top = 258
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 50 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label94: TLabel
+    Left = 906
+    Top = 218
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 40 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label95: TLabel
+    Left = 906
+    Top = 198
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 35 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label96: TLabel
+    Left = 906
+    Top = 138
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 20 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label97: TLabel
+    Left = 906
+    Top = 118
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- 15 -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label98: TLabel
+    Left = 906
+    Top = 78
+    Width = 30
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '-  5  -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label99: TLabel
+    Left = 906
+    Top = 58
+    Width = 31
+    Height = 18
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '-  0  -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label100: TLabel
+    Left = 906
+    Top = 38
+    Width = 31
+    Height = 17
+    Alignment = taCenter
+    AutoSize = False
+    Caption = '- +5  -'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = '@Arial Unicode MS'
+    Font.Style = []
+    ParentFont = False
+  end
   object Button1: TButton
-    Left = 1172
-    Top = 29
+    Left = 1196
+    Top = 30
     Width = 54
     Height = 22
     Caption = 'Connect'
@@ -1065,9 +1701,9 @@ object Form1: TForm1
     OnClick = Button1Click
   end
   object UDPEdit: TEdit
-    Left = 1171
+    Left = 1160
     Top = 3
-    Width = 78
+    Width = 89
     Height = 23
     TabOrder = 1
     Text = '192.168.1.76'
@@ -1083,9 +1719,9 @@ object Form1: TForm1
     TabOrder = 2
   end
   object memLog: TMemo
-    Left = 1099
+    Left = 1111
     Top = 54
-    Width = 169
+    Width = 157
     Height = 244
     Lines.Strings = (
       'memLog')
@@ -1724,10 +2360,10 @@ object Form1: TForm1
     TabOrder = 66
   end
   object ProgressBar65: TProgressBar
-    Left = 81
+    Left = 62
     Top = 44
     Width = 38
-    Height = 223
+    Height = 225
     Max = 550
     Orientation = pbVertical
     Position = 20
@@ -1737,76 +2373,76 @@ object Form1: TForm1
     Left = 128
     Top = 44
     Width = 38
-    Height = 223
+    Height = 225
     Max = 550
     Orientation = pbVertical
     Position = 20
     TabOrder = 68
   end
   object ProgressBar67: TProgressBar
-    Left = 203
+    Left = 188
     Top = 44
     Width = 38
-    Height = 223
+    Height = 225
     Max = 550
     Orientation = pbVertical
     Position = 20
     TabOrder = 69
   end
   object ProgressBar68: TProgressBar
-    Left = 250
+    Left = 252
     Top = 44
     Width = 38
-    Height = 223
+    Height = 225
     Max = 550
     Orientation = pbVertical
     Position = 20
     TabOrder = 70
   end
   object ProgressBar69: TProgressBar
-    Left = 876
+    Left = 869
     Top = 44
     Width = 38
-    Height = 223
+    Height = 225
     Max = 550
     Orientation = pbVertical
     Position = 20
     TabOrder = 71
   end
   object ProgressBar70: TProgressBar
-    Left = 923
+    Left = 936
     Top = 44
     Width = 38
-    Height = 223
+    Height = 225
     Max = 550
     Orientation = pbVertical
     Position = 20
     TabOrder = 72
   end
   object ProgressBar71: TProgressBar
-    Left = 998
+    Left = 996
     Top = 44
     Width = 38
-    Height = 223
+    Height = 225
     Max = 550
     Orientation = pbVertical
     Position = 20
     TabOrder = 73
   end
   object ProgressBar72: TProgressBar
-    Left = 1045
-    Top = 44
+    Left = 1061
+    Top = 45
     Width = 38
-    Height = 223
+    Height = 225
     Max = 550
     Orientation = pbVertical
     Position = 20
     TabOrder = 74
   end
   object Button2: TButton
-    Left = 1231
+    Left = 1112
     Top = 30
-    Width = 40
+    Width = 57
     Height = 20
     Caption = 'Test'
     TabOrder = 75
@@ -1828,8 +2464,9 @@ object Form1: TForm1
     Top = 104
   end
   object Timer4: TTimer
+    Enabled = False
     OnTimer = Timer4Timer
-    Left = 817
-    Top = 171
+    Left = 1131
+    Top = 103
   end
 end

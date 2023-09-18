@@ -50,7 +50,7 @@ int mSetActuatorData(struct mbn_handler *mbn, unsigned short obj, union mbn_data
 //	}
 
 
-	//------------------------------------- Vu Meters
+	//------------------------------------- 32 Kleine Stereo Vu Meters -------------------------------------
 	int AantalVumeters, ProgVumeters, SubVumeters;
 	float vuValueL, ValueProg, ValueSub;
 
@@ -74,7 +74,7 @@ int mSetActuatorData(struct mbn_handler *mbn, unsigned short obj, union mbn_data
 	}
 
 
-
+	//-------------------------------------- Laatste 4 VU meters voor Prog Sub Dump en CRM -----------------
 	if ( (obj == 1024) || (obj == 1025) )       // Prog Vu meter
 	{
 		int ValueP = (int)dat.Float;
@@ -142,26 +142,122 @@ int mSetActuatorData(struct mbn_handler *mbn, unsigned short obj, union mbn_data
 
 
 
-//	for ( ProgVumeters = 0; ProgVumeters < 2; ProgVumeters++)
-//	{
-//		if ( obj == 1029+ProgVumeters )
-//		{
-//			int ValueS = (int)dat.Float;
-//			if ( ValueS > -50 )
-//			{
-//
-//				ValueSub = 50+dat.Float;
-//				ValueSub = ((ValueSub)*10);
-//				SubMeterBuffer[ProgVumeters]=ValueSub;
-//
-//			}
-//			else
-//			{
-//				ValueSub = 0;
-//				SubMeterBuffer[ProgVumeters]=0;
-//			}
-//		}
-//	}
+//---------------------------------------------------------------------------
+//----------------------------- GPO SIGNALES------------------------------------
+//---------------------------------------------------------------------------
+
+
+
+
+	else if (obj == 1041)
+	{
+		int t=dat.SInt;
+
+		if( t == 1 )
+		  Form1->LabelRedL1->Color = clRed;
+		else
+		  Form1->LabelRedL1->Color = clInactiveCaption;
+	}
+
+
+//---------------------------------------------------------------------------
+
+
+
+	else if (obj == 1042)
+	{
+		int t=dat.SInt;
+
+		if( t == 1 )
+		  Form1->LabelRedL2->Color = clRed;
+		else
+		  Form1->LabelRedL2->Color = clInactiveCaption;
+	}
+
+
+//---------------------------------------------------------------------------
+
+
+
+	else if (obj == 1043)
+	{
+		int t=dat.SInt;
+
+		if( t == 1 )
+		  Form1->LabelRedL3->Color = clRed;
+		else
+		  Form1->LabelRedL3->Color = clInactiveCaption;
+	}
+
+
+//---------------------------------------------------------------------------
+
+
+
+	else if (obj == 1044)
+	{
+		int t=dat.SInt;
+
+		if( t == 1 )
+		  Form1->LabelRedL4->Color = clRed;
+		else
+		  Form1->LabelRedL4->Color = clInactiveCaption;
+	}
+
+
+//---------------------------------------------------------------------------
+
+
+	else if (obj == 1045)
+	{
+		int t=dat.SInt;
+
+		if( t == 1 )
+		  Form1->LabelRedL5->Color = clRed;
+		else
+		  Form1->LabelRedL5->Color = clInactiveCaption;
+	}
+
+
+//---------------------------------------------------------------------------
+
+
+	else if (obj == 1046)
+	{
+		int t=dat.SInt;
+
+		if( t == 1 )
+		  Form1->LabelRedL6->Color = clRed;
+		else
+		  Form1->LabelRedL6->Color = clInactiveCaption;
+	}
+
+//---------------------------------------------------------------------------
+
+
+	else if (obj == 1047)
+	{
+		int t=dat.SInt;
+
+		if( t == 1 )
+		  Form1->LabelRedL7->Color = clRed;
+		else
+		  Form1->LabelRedL7->Color = clInactiveCaption;
+	}
+//----------------1058-------1237----------------------------------------------------
+
+
+	else if (obj == 1048)
+	{
+		int t=dat.SInt;
+
+		if( t == 1 )
+		  Form1->LabelRedL8->Color = clRed;
+		else
+		  Form1->LabelRedL8->Color = clInactiveCaption;
+	}
+
+//---------------------------------------------------------------------------
 
 
 

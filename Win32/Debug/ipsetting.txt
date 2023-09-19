@@ -1,1 +1,2 @@
 ip address  = 192.168.1.76
+Axum=1 Axite=2 = 2

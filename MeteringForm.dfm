@@ -3,8 +3,8 @@ object Form1: TForm1
   Top = 0
   VertScrollBar.Tracking = True
   Caption = 'Test Axite Metering utility'
-  ClientHeight = 440
-  ClientWidth = 1268
+  ClientHeight = 437
+  ClientWidth = 1256
   Color = clWindow
   DoubleBuffered = True
   Font.Charset = DEFAULT_CHARSET

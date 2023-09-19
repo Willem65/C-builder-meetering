@@ -9,6 +9,9 @@
 #include <Vcl.Forms.hpp>
 #include <Vcl.ExtCtrls.hpp>
 #include <Vcl.ComCtrls.hpp>
+
+ extern int AxiteAxumId;
+
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
 {
@@ -217,10 +220,14 @@ __published:	// IDE-managed Components
 	void __fastcall Button2Click(TObject *Sender);
 	void __fastcall Timer4Timer(TObject *Sender);
 	void __fastcall OnlineDetectTimerTimer(TObject *Sender);
+//	void __fastcall CheckBox1Click(TObject *Sender);
+//	void __fastcall CheckBox2Click(TObject *Sender);
 
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);
+
+ //extern int checkBox1;
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TForm1 *Form1;

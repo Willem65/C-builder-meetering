@@ -1,7 +1,7 @@
 ﻿#define MBN_VARARG
 
 #include "mbn.h"
-#include "MeeteringForm.h"
+#include "MeteringForm.h"
 #include "Button1Click.h"
 
 
@@ -63,7 +63,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 	thisnodeB.MambaNetAddr = 0;
 	thisnodeB.Services = 0;
 	sprintf(thisnodeB.Description, "Axite Control Surface 6 Faders + CRM");
-	sprintf(thisnodeB.Name, "Meetering Test Node");
+	sprintf(thisnodeB.Name, "Metering Test Node");
 	thisnodeB.ManufacturerID = 0x0001;
 	thisnodeB.ProductID = 0x0024;
 	thisnodeB.UniqueIDPerProduct = 0x516;   //UniqueIDPerProduct

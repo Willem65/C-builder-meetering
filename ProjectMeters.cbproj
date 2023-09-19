@@ -135,13 +135,12 @@
             <BuildOrder>7</BuildOrder>
             <IgnorePath>true</IgnorePath>
         </LibFiles>
-        <CppCompile Include="MeeteringForm.cpp">
+        <CppCompile Include="MeteringForm.cpp">
             <Form>Form1</Form>
             <FormType>dfm</FormType>
-            <DependentOn>MeeteringForm.h</DependentOn>
+            <DependentOn>MeteringForm.h</DependentOn>
             <BuildOrder>3</BuildOrder>
         </CppCompile>
-        <None Include="MeeteringForm.dfm"/>
         <CppCompile Include="mSetActuatorData.cpp">
             <BuildOrder>8</BuildOrder>
         </CppCompile>
@@ -155,7 +154,7 @@
             <BuildOrder>1</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
-        <FormResources Include="MeeteringForm.dfm"/>
+        <FormResources Include="MeteringForm.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -243,12 +242,6 @@
                 <DeployFile LocalName=".\Win32\Debug\ProjectMeters.tds" Configuration="Debug" Class="DebugSymbols">
                     <Platform Name="Win32">
                         <RemoteName>ProjectMeters.tds</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="MeeteringForm.dfm" Configuration="Debug" Class="ProjectFile">
-                    <Platform Name="Win32">
-                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

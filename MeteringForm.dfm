@@ -828,12 +828,12 @@ object Form1: TForm1
   object Label118: TLabel
     Left = 1161
     Top = 302
-    Width = 104
+    Width = 103
     Height = 65
     BiDiMode = bdLeftToRight
     Caption = 
-      '<-- 32 VU meeters Pre Fadered.              ( Virtuel and fysica' +
-      'l meeters for one DSP card )'
+      '<-- 32 VU meters Pre Fadered.              ( Virtuel and fysical' +
+      ' meters for one DSP card )'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11

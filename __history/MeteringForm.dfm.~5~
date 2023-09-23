@@ -1128,7 +1128,7 @@ object Form1: TForm1
     Height = 17
     Alignment = taCenter
     AutoSize = False
-    Caption = '- 25 -'
+    Caption = '- 30 -'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -1143,7 +1143,7 @@ object Form1: TForm1
     Height = 17
     Alignment = taCenter
     AutoSize = False
-    Caption = '- 30 -'
+    Caption = '- 25 -'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -1308,7 +1308,7 @@ object Form1: TForm1
     Height = 17
     Alignment = taCenter
     AutoSize = False
-    Caption = '- 25 -'
+    Caption = '- 30 -'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -1323,7 +1323,7 @@ object Form1: TForm1
     Height = 17
     Alignment = taCenter
     AutoSize = False
-    Caption = '- 30 -'
+    Caption = '- 25 -'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -1353,7 +1353,7 @@ object Form1: TForm1
     Height = 17
     Alignment = taCenter
     AutoSize = False
-    Caption = '- 30 -'
+    Caption = '- 25 -'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -1368,7 +1368,7 @@ object Form1: TForm1
     Height = 17
     Alignment = taCenter
     AutoSize = False
-    Caption = '- 25 -'
+    Caption = '- 30 -'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -1533,7 +1533,7 @@ object Form1: TForm1
     Height = 17
     Alignment = taCenter
     AutoSize = False
-    Caption = '- 30 -'
+    Caption = '- 25 -'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -1548,7 +1548,7 @@ object Form1: TForm1
     Height = 17
     Alignment = taCenter
     AutoSize = False
-    Caption = '- 25 -'
+    Caption = '- 30 -'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11

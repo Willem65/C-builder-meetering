@@ -1,4 +1,4 @@
-﻿#define MBN_VARARG
+#define MBN_VARARG
 
 
 

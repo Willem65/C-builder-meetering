@@ -69,17 +69,25 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 	{
 		//ShowMessage(AxiteAxumId);
 		thisnodeB.ProductID = 0x0024;
+		thisnodeB.FirmwareMajorRevision = 1;
 	}
-	else if( AxiteAxumId == 1 )
+	if( AxiteAxumId == 1 )
+	{
+		//ShowMessage(AxiteAxumId);
+		thisnodeB.ProductID = 0x03EB;
+		thisnodeB.FirmwareMajorRevision = 8;
+	}
+	if( AxiteAxumId == 3 )
 	{
 		//ShowMessage(AxiteAxumId);
 		thisnodeB.ProductID = 0x001A;
+		thisnodeB.FirmwareMajorRevision = 8;
 	}
 	
-	thisnodeB.UniqueIDPerProduct = 0x516;   //UniqueIDPerProduct
+	thisnodeB.UniqueIDPerProduct = 0x417;   //UniqueIDPerProduct
 	thisnodeB.HardwareMajorRevision = 0;
 	thisnodeB.HardwareMinorRevision = 0;
-	thisnodeB.FirmwareMajorRevision = 1;
+	//thisnodeB.FirmwareMajorRevision = 8;
 	thisnodeB.FirmwareMinorRevision = 3;
 	thisnodeB.FPGAFirmwareMajorRevision = 0;
 	thisnodeB.FPGAFirmwareMinorRevision = 0;
